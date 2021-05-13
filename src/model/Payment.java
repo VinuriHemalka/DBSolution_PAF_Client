@@ -207,7 +207,7 @@ private static Connection connect() {
 			 catch (Exception e) 
 			 { 
 				 //output = "Error while deleting the payment."; 
-				 output = "{\"status\":\"error\", \"data\": \"Error while deleting the payment.\"}"; 
+				 output = "{\"status\":\"error\", \"data\": \"Error while deleting the payments.\"}"; 
 				 System.err.println(e.getMessage()); 
 				 System.out.println(e);
 			 } 
