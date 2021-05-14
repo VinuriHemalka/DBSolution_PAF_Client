@@ -67,7 +67,7 @@ package model;
 					catch (Exception e)
 					{
 						//output = "Error while inserting the order.";
-						 output = "{\"status\":\"error\", \"data\": \"Error while inserting the order.\"}";
+						 output = "{\"status\":\"error\", \"data\": \"Error while inserting the Researcher.\"}";
 						 System.err.println(e.getMessage());
 						 System.out.println(e.getMessage());
 							System.out.println(e);
@@ -143,7 +143,7 @@ package model;
 					}
 					catch (Exception e)
 					{
-						output = "Error while reading the items.";
+						output = "Error while reading the researchers.";
 						System.err.println(e.getMessage());
 					}
 					return output;
@@ -220,7 +220,7 @@ package model;
 				catch (Exception e)
 				{
 					//output = "Error while deleting the researcher.";
-					output = "{\"status\":\"error\", \"data\": \"Error while deleting the order.\"}"; 
+					output = "{\"status\":\"error\", \"data\": \"Error while deleting the researcher.\"}"; 
 					 System.err.println(e.getMessage()); 
 					 System.out.println(e);
 				}
