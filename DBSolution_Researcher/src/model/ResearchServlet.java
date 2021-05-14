@@ -133,7 +133,7 @@ package model;
 							// buttons
 						
 
-						 output += "<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-secondary'></td>"
+						 output += "<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-info'></td>"
 								 + "<td><button class='btnRemove btn btn-danger' name='btnRemove' id ='btnRemove' value='"+ Researcher_ID +"' >Remove</button></td></tr>";
 					 } 
 						con.close();

@@ -15,6 +15,32 @@ $(document).on("click", "#btnSave", function(event) {
 	$("#alertError").text("");
 	$("#alertError").hide();
 	
+	
+	var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    const email = $("#Emai").val();
+    debugger;
+    if(!regex.test(email)){
+    $("#alertError").text("invalid email");
+    $("#alertError").show();
+    return;
+    }
+    else{
+    $("#alertError").hide();
+    }
+    var numberPattern = /\d+/g;
+    const isPhoneNumber = $("#PhoneNumber").val().match(numberPattern);
+    if(!isPhoneNumber){
+    $("#alertError").text("invalid phone number");
+    $("#alertError").show();
+    return
+    }
+    else{
+    $("#alertError").hide();
+}
+	
+	
+	
+	
 	// Form validation-------------------
 	var status = validateItemForm();
 	if (status != true) {
@@ -33,6 +59,7 @@ $(document).on("click", "#btnSave", function(event) {
 		dataType : "text",
 		complete : function(response, status) {
 			onItemSaveComplete(response.responseText, status);
+			//window.setTimeout(function(){location.reload()},3000)
 		}
 	});
 
@@ -118,6 +145,7 @@ function onItemDeleteComplete(response, status) {
 // UPDATE==========================================
 $(document).on("click",".btnUpdate",function(event)
 		{
+		
 			$("#Researcher_ID").val($(this).closest("tr").find('td:eq(0)').text());
 			$("#Reseracher_name").val($(this).closest("tr").find('td:eq(1)').text());
 			$("#Category").val($(this).closest("tr").find('td:eq(2)').text());
